@@ -1,0 +1,38 @@
+{
+  "name": "digital-press-kit-builder",
+  "version": "1.0.0",
+  "description": "A web application that enables musicians to create professional, shareable digital press kits",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "server": "nodemon server/server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "cd client && npm run build",
+    "install-client": "cd client && npm install",
+    "install-server": "cd server && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "test": "cd server && npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dxaginfo/digital-press-kit-builder-app.git"
+  },
+  "keywords": [
+    "press-kit",
+    "music",
+    "digital-press-kit",
+    "musicians",
+    "artists"
+  ],
+  "author": "DX AG",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dxaginfo/digital-press-kit-builder-app/issues"
+  },
+  "homepage": "https://github.com/dxaginfo/digital-press-kit-builder-app#readme",
+  "dependencies": {
+    "concurrently": "^7.6.0",
+    "nodemon": "^2.0.22"
+  }
+}
